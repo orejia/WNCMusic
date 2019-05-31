@@ -1,5 +1,9 @@
 {
   "pages": [
+    "pages/music/music",
+    "pages/searchbar/searchbar",
+    "pages/article/article",
+    "pages/function/function",
     "pages/index/index",
     "pages/logs/logs"
   ],
