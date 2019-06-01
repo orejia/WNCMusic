@@ -1,10 +1,11 @@
 {
   "pages": [
-    "pages/music/music",
+    "pages/player/player",
+    "pages/index/index",
+    
     "pages/searchbar/searchbar",
     "pages/article/article",
     "pages/function/function",
-    "pages/index/index",
     "pages/logs/logs"
   ],
   "window": {

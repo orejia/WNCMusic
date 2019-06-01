@@ -1,39 +1,35 @@
 //app.js
 App({
   onLaunch: function () {
-    // 展示本地存储能力
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
-
-    // 登录
-    wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-      }
-    })
-    // 获取用户信息
-    wx.getSetting({
-      success: res => {
-        if (res.authSetting['scope.userInfo']) {
-          // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
-          wx.getUserInfo({
-            success: res => {
-              // 可以将 res 发送给后台解码出 unionId
-              this.globalData.userInfo = res.userInfo
-
-              // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-              // 所以此处加入 callback 以防止这种情况
-              if (this.userInfoReadyCallback) {
-                this.userInfoReadyCallback(res)
-              }
-            }
-          })
-        }
-      }
-    })
+    
   },
-  globalData: {
-    userInfo: null
+  loadSongs: function () {
+    var songs = new Array();
+
+    var song_01 = new Object();
+    song_01.title = '南山忆'
+    song_01.epname = '《半城烟沙》';
+    song_01.singer = '许嵩';
+    song_01.coverImgUrl = 'https://orejia.cn/image/001.jpg';
+    song_01.src = "https://orejia.cn/audio/001.mp3";
+    songs.push(song_01);
+
+    var song_02 = new Object();
+    song_02.title = '庐州月'
+    song_02.epname = '《寻雾启示》';
+    song_02.singer = '许嵩';
+    song_02.coverImgUrl = 'https://orejia.cn/image/002.jpg';
+    song_02.src = "https://orejia.cn/audio/002.mp3";
+    songs.push(song_02);
+
+    var song_03 = new Object();
+    song_03.title = '有何不可'
+    song_03.epname = '《自定义》';
+    song_03.singer = '许嵩';
+    song_03.coverImgUrl = 'https://orejia.cn/image/003.jpg';
+    song_03.src = "https://orejia.cn/audio/003.mp3";
+    songs.push(song_03);
+
+    return songs;
   }
 })

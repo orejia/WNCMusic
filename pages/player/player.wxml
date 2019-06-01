@@ -1,0 +1,5 @@
+<!--pages/test/test.wxml-->
+<button bindtap="play">播放</button>
+<button bindtap="pause">暂停</button>
+<button bindtap="next">下一首</button>
+<button bindtap="before">上一首</button>
