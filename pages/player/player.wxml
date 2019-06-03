@@ -1,5 +1,9 @@
 <!--pages/test/test.wxml-->
-<button bindtap="play">播放</button>
+<!-- <button bindtap="play">播放</button>
 <button bindtap="pause">暂停</button>
 <button bindtap="next">下一首</button>
-<button bindtap="before">上一首</button>
+<button bindtap="before">上一首</button> -->
+<view>
+  <image class="player-control" src="../../images/5.png" style="width:70px;height:70px;" bindtap="paly"></image>
+  <image class="player-control" src="../../images/pause.png" style="width:70px;height:70px;" bindtap="stop"></image>
+</view>
