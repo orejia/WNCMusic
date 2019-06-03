@@ -1,9 +1,13 @@
-<!--pages/test/test.wxml-->
-<!-- <button bindtap="play">播放</button>
-<button bindtap="pause">暂停</button>
-<button bindtap="next">下一首</button>
-<button bindtap="before">上一首</button> -->
-<view>
-  <image class="player-control" src="../../images/5.png" style="width:70px;height:70px;" bindtap="paly"></image>
-  <image class="player-control" src="../../images/pause.png" style="width:70px;height:70px;" bindtap="stop"></image>
+<!-- <view class="header" style="position:absolute; left:{{player_left}}px; top:{{player_top}}px">
+  <view class="cicle-infor {{playing ? 'cicle-playing' : 'cicle-paused'}}" style="width:{{player_width}}px; height:{{player_height}}px; background-image: url({{poster}})" bindtap="animation_control">
+  </view>
+</view> -->
+
+<!-- <image class="player_status_img" src="{{playing?playing_img:pause_img}}" mode="aspectFit" style="witdh:250px;height:250px;"></image> -->
+
+<!-- <img class="player_status_img" src="../../images/play2.png"></img> -->
+<view class="cicle-infor {{playing ? 'cicle-playing' : 'cicle-paused'}}" style="background-image: url({{poster}})">
 </view>
+<image class="player_status_img" src="{{playing?pause_img:playing_img}}" mode="aspectFit" bindtap="animation_control">
+  </image>
+  <!-- </view> -->

@@ -3,8 +3,48 @@ page {
   background-color: rgb(230, 49, 49);
 } 
 
-.player-control{
+/* .player-control{
   position: absolute;
   left: 330rpx;
   top: 550rpx;
+} */
+
+/****动画****/
+.cicle-infor{
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  top:150px;
+  left: 60px;
+  
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  animation: rotate 10s linear infinite forwards;
+  margin: 0 auto;
+}
+
+@keyframes rotate{
+  0%{
+    transform: rotate(0deg)
+  }100%{
+    transform: rotate(360deg)
+  }
+}
+
+.cicle-playing{
+  animation-play-state:running
+}
+
+.cicle-paused{
+  animation-play-state:paused
+}
+
+.player_status_img{
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  top:150px;
+  left: 60px;
 }

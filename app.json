@@ -1,9 +1,10 @@
 {
   "pages": [
-        "pages/test/test",
-        "pages/player/player",
-    "pages/index/index",
 
+    "pages/index/index",
+            "pages/player/player",
+      "pages/test/test",
+ 
     "pages/searchbar/searchbar",
     "pages/article/article",
     "pages/function/function",
