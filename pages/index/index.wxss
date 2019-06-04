@@ -1,6 +1,15 @@
-page{
-
+.buttom_navbar{
+  width: 100%;
+  background-color: #000;
+  display: flex;
+  position: fixed;
+  bottom: 0;
 }
- .cell_line{
-  border-bottom:1px solid #E8E8E8;
+.buttom_navbar_item{
+  position: relative;
+  width: 50px;
+  height: 50px;
+}
+.page{
+  margin-bottom: 100px;
 }

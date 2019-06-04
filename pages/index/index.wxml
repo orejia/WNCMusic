@@ -1,18 +1,19 @@
-<view class="page">
-  <!--分页导航-->
-  <view class="page__bd">
-    <view class="weui-tab">
-      <view class="weui-navbar">
-        <block wx:for="{{tabs}}" wx:key="*this">
-          <!-- 动态指定样式 -->
-          <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
-            <view class="weui-navbar__title">{{item}}</view>
-          </view>
-        </block>
+<view class='page'>
+  <view class='music'>
+    <!--分页导航-->
+    <view class="weui-navbar">
+      <block wx:for="{{tabs}}" wx:key="*this">
+        <!-- 动态指定样式 -->
+        <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+          <view class="weui-navbar__title">{{item}}</view>
+        </view>
+      </block>
 
-        <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
-      </view>
+      <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+    </view>
 
+    <!-- 搜索 -->
+    <view class='search'>
       <!-- 搜索框 -->
       <view class="weui-search-bar">
         <view class="weui-search-bar__form">
@@ -36,23 +37,36 @@
         <view wx:for="{{search_results}}" wx:key="*this">
           <navigator url="../player/player?song_id={{item.id}}" class="weui-cell" hover-class="weui-cell_active">
             <view class="weui-cell__bd">{{item.title}}</view>
-            <!-- <view data-song="{{item}}" class="weui-cell__bd" bindtap="tapName">{{item.title}}</view> -->
-          </navigator>
-        </view>
-      </view>
-
-      <!-- 音乐列表 -->
-      <view class="weui-cells weui-cells_after-title" hidden="{{inputShowed}}">
-        <view wx:for="{{music}}" wx:key="*this">
-          <navigator url="../player/player?song_id={{item.id}}" class="weui-cell weui-cell_access cell_line" hover-class="weui-cell_active">
-            <view class="weui-cell__bd ">{{item.title}}</view>
-            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            <view data-song="{{item}}" class="weui-cell__bd" bindtap="tapName">{{item.title}}</view>
           </navigator>
         </view>
       </view>
     </view>
 
+    <!-- 音乐列表 -->
+    <!-- <view class="weui-cells weui-cells_after-title" hidden="{{inputShowed}}">
+  <view wx:for="{{music}}" wx:key="*this">
+    <navigator url="../player/player?song_id={{item.id}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__bd ">{{item.title}}</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+  </view>
+</view> -->
+    <!-- <view class="weui-cells weui-cells_after-title" hidden="{{inputShowed}}"> -->
+    <view class="weui-cells weui-cells_after-title" hidden="{{inputShowed}}">
+      <view wx:for="{{music}}" wx:key="*this">
+        <navigator url="../player/player?song_id={{item.id}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__bd ">{{item.title}}</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </navigator>
+      </view>
+    </view>
   </view>
 
-
+  <!-- 底部导航 -->
+  <view class='buttom_navbar'>
+    <image class='buttom_navbar_item' src='{{navbarImg1}}' style='left:35px;' bindtap='play_1' data-flag="123"></image>
+    <image class='buttom_navbar_item' src='{{navbarImg2}}' style='left:105px;' bindtap='play_2'></image>
+    <image class='buttom_navbar_item' src='{{navbarImg3}}' style='left:175px;'></image>
+  </view>
 </view>

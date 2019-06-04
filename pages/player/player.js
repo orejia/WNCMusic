@@ -10,14 +10,35 @@ Page({
     // player_height:0,
     // player_left:0,
     // player_top:0,
+    default_song:{
+
+    },
 
     init_flag:false,
     poster: "",
-    playing_img: "../../images/play2.png", 
-    pause_img: "../../images/pause2.png", 
+    playing_img: "../../images/play.png", 
+    pause_img: "../../images/pause.png", 
     playing: false
   },
+  onHide: function () {
+    console.log("player页 隐藏.....");
+  },
+  onUnload:function(){
+    backgroundAudioManager.stop();
+    console.log("player页 卸载.....");
+  },
   onLoad: function (e) {
+    console.log("test...");
+    console.log("入参 %s",e.id);
+    if (e.id=="abc"){
+      // backgroundAudioManager.title = "未知歌曲";
+      // backgroundAudioManager.epname = "未知专辑"; //专辑名
+      // backgroundAudioManager.singer = "未知歌手";
+      // backgroundAudioManager.coverImgUrl = "https://orejia.cn/image/童年.jpg";
+      // console.log("默认 %d",e.song_id);
+      e.song_id = 10;  //默认歌曲
+    }
+
     var that = this;
 
     /*获取当前音乐信息 */
@@ -33,7 +54,7 @@ Page({
     }
 
     var song = that.data.song;
-    // console.log(song);
+    console.log(song);
     backgroundAudioManager.title = song.title;
     backgroundAudioManager.epname = song.epname; //专辑名
     backgroundAudioManager.singer = song.singer;
@@ -54,7 +75,7 @@ Page({
   animation_control: function (e) {
     var that = this;
     if (that.data.playing) {
-      console.log("playing...");
+      // console.log("playing...");
       that.setData({
         playing: false
       })
@@ -74,6 +95,11 @@ Page({
       }
       backgroundAudioManager.play();
     }
+  },
+  toHome:function(){
+    wx.navigateTo({  // 页面E 不能跳转到 页面F
+      url: '/pages/index/index?id=1'
+    })
   }
   // before: function () {
   //   console.log("上一首");
@@ -91,5 +117,6 @@ Page({
   //   console.log(i);
   //   this.play();
   // }
+
 
 })

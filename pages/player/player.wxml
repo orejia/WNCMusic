@@ -11,4 +11,5 @@
 <image class="player_status_img" src="{{playing?pause_img:playing_img}}" mode="aspectFit" bindtap="animation_control">
   </image>
   <!-- </view> -->
-<my-component my-property="example" />
+<button class="tabbar" bindtap='toHome'>dddddd</button>
+<!-- <my-component my-property="example" /> -->

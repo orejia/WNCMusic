@@ -4,24 +4,33 @@
  * Licensed under the MIT license
  */
 
-page {
+/* page {
   line-height: 1.6;
   font-family: -apple-system-font, Helvetica Neue, sans-serif;
-}
+} */
 
 icon {
   vertical-align: middle;
 }
 
-.weui-cells {
-  /* position: relative;   */
-  position: absolute;
-  top: 98px;
-  width: 100%;
-  margin-top: 1.17647059em;
-  background-color: #fff;
-  line-height: 1.41176471;
+.weui-cell{
   font-size: 17px;
+  background-color:#fff;
+  border-bottom:1px solid #E8E8E8;
+}
+
+.weui-cells {
+  position: absolute;
+  width: 100%;
+  /* top: 98px; */
+  /* margin-top: 1.17647059em;
+  margin-top: 1.17647059em; */
+  /* margin-top: 100px; */
+
+  /* line-height: 1.41176471; */
+  /* font-size: 17px; */
+  margin-bottom: 100px;
+  /* border-bottom:1px solid rgb(231, 44, 44); */
 }
 
 .weui-cells:before {
@@ -34,13 +43,13 @@ icon {
   position: absolute;
   left: 0;
   right: 0;
-  height: 1px;
+  /* height: 1px; */
   color: #d9d9d9;
 }
 
 .weui-cells:after {
-  bottom: 0;
-  border-bottom: 1rpx solid #d9d9d9;
+  /* bottom: 30px; */
+  /* border-bottom: 1rpx solid #d9d9d9; */
 }
 
 .weui-cells__title {
@@ -1106,10 +1115,10 @@ icon {
   word-wrap: normal;
 }
 
-.weui-tab {
+/* .weui-tab {
   position: relative;
   height: 100%;
-}
+} */
 
 .weui-tab__panel {
   box-sizing: border-box;

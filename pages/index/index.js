@@ -14,7 +14,11 @@ Page({
 
     inputShowed: false,
     inputVal: "",
-    inputValueChanged: false
+    inputValueChanged: false,
+    /*底部导航*/
+    navbarImg1: "/images/find.png",
+    navbarImg2: "/images/friend.png",
+    navbarImg3: "/images/my.png"
   },
   onLoad: function () {
     var that = this;
@@ -81,5 +85,18 @@ Page({
     this.setData({
       search_results:tmp_results
     });
+  },
+  play_1:function(e){
+    var flag = e.currentTarget.dataset.flag;
+    console.log(flag);
+    wx.navigateTo({
+      url: '/pages/player/player?id=abc'
+    })
+  },
+  play_2:function(e){
+    // console.log(p)
+      wx.navigateBack({
+        delta:1
+      });
   }
 });

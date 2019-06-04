@@ -3,8 +3,7 @@
     "pages/index/index",
     "pages/player/player",
     "pages/article/article",
-    "pages/function/function",
-    "pages/logs/logs"
+    "pages/function/function"
   ],
   "window": {
     "backgroundTextStyle": "light",

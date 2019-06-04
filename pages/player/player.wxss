@@ -4,8 +4,8 @@ page {
 /****动画****/
 .cicle-infor{
   position: absolute;
-  width: 250px;
-  height: 250px;
+  width: 240px;
+  height: 240px;
   top:150px;
   left: 60px;
   
@@ -37,6 +37,6 @@ page {
   position: absolute;
   width: 250px;
   height: 250px;
-  top:150px;
-  left: 60px;
+  top:145px;
+  left: 55px;
 }
