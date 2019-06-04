@@ -1,13 +1,5 @@
-/* pages/function/function.wxss */
 page {
-  background-color: rgb(230, 49, 49);
 } 
-
-/* .player-control{
-  position: absolute;
-  left: 330rpx;
-  top: 550rpx;
-} */
 
 /****动画****/
 .cicle-infor{

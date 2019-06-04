@@ -3,6 +3,7 @@ const app = getApp();
 const backgroundAudioManager = wx.getBackgroundAudioManager();
 const songs_info = wx.getStorageSync("songs_info");
 Page({
+
   data: {
     song:{},  /*当前歌曲信息 */
     // player_width:0,

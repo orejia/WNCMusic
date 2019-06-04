@@ -1,6 +1,0 @@
-    <view class="cicle-infor {{playing ? 'cicle-playing' : 'cicle-paused'}}" style=" background-image: url({{poster}})" bindtap="animation_control">
-
-    </view>
-
-<!-- 
-        <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick"> -->
