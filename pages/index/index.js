@@ -16,9 +16,9 @@ Page({
     inputVal: "",
     inputValueChanged: false,
     /*底部导航*/
-    navbarImg1: "/images/find.png",
-    navbarImg2: "/images/friend.png",
-    navbarImg3: "/images/my.png"
+    // navbarImg1: "/images/find.png",
+    // navbarImg2: "/images/friend.png",
+    // navbarImg3: "/images/my.png"
   },
   onLoad: function () {
     var that = this;
@@ -86,14 +86,8 @@ Page({
       search_results:tmp_results
     });
   },
-  play_1:function(e){
-    var flag = e.currentTarget.dataset.flag;
-    console.log(flag);
-    wx.navigateTo({
-      url: '/pages/player/player?id=abc'
-    })
-  },
-  play_2:function(e){
+
+  back_from_index:function(e){
     // console.log(p)
       wx.navigateBack({
         delta:1
