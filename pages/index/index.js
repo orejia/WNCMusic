@@ -98,5 +98,8 @@ Page({
       wx.navigateBack({
         delta:1
       });
+  },
+  return_player:function(){
+    console.log("123");
   }
 });

@@ -44,15 +44,6 @@
     </view>
 
     <!-- 音乐列表 -->
-    <!-- <view class="weui-cells weui-cells_after-title" hidden="{{inputShowed}}">
-  <view wx:for="{{music}}" wx:key="*this">
-    <navigator url="../player/player?song_id={{item.id}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-      <view class="weui-cell__bd ">{{item.title}}</view>
-      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-    </navigator>
-  </view>
-</view> -->
-    <!-- <view class="weui-cells weui-cells_after-title" hidden="{{inputShowed}}"> -->
     <view class="weui-cells weui-cells_after-title" hidden="{{inputShowed}}">
       <view wx:for="{{music}}" wx:key="*this">
         <navigator url="../player/player?song_id={{item.id}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
@@ -61,12 +52,17 @@
         </navigator>
       </view>
     </view>
-  </view>
 
-  <!-- 底部导航 -->
-  <view class='buttom_navbar'>
+    <!-- 底部导航 -->
+    <!-- <view class='buttom_navbar'>
     <image class='buttom_navbar_item' src='{{navbarImg1}}' style='left:35px;' bindtap='play_1' data-flag="123"></image>
     <image class='buttom_navbar_item' src='{{navbarImg2}}' style='left:105px;' bindtap='play_2'></image>
-    <image class='buttom_navbar_item' src='{{navbarImg3}}' style='left:175px;'></image>
+    <image class='buttom_navbar_item' src='{{navbarImg3}}' style='left:175px;'></image>-->
+  </view>
+  <!-- <button class="index_btn" plain="true">123</button> -->
+  <!--圆形点击框  -->
+  <view class="round-click">
+    <!-- <navigator url='/pages/player/player'>发布咨询</navigator> -->
+    <view bindtap='return_player'>123</view>
   </view>
 </view>
